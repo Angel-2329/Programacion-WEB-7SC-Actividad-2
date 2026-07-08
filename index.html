@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Usuario</title>
+    <script src="js/index.js" type="module"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <main class="contenedor-principal">
+        <form class="formulario-registro">
+            <h1>Registro para nuevos usuarios</h1>
+
+            <div class="seccion-formulario">
+                <h2 class="titulo-seccion">Información Personal</h2>
+                
+                <div class="grupo-input">
+                    <label for="nombre">Ingresa tu(s) nombre(s)</label>
+                    <input type="text" id="nombre" placeholder="Ej: Angel de Jesus" required>
+                </div>
+
+                <div class="fila-inputs">
+                    <div class="grupo-input">
+                        <label for="ap-paterno">Ingresa tu apellido paterno</label>
+                        <input type="text" id="ap-paterno" placeholder="Ej: Mendez" required>
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="ap-materno">Ingresa tu apellido materno</label>
+                        <input type="text" id="ap-materno" placeholder="Ej: Garcia" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion-formulario">
+                <h2 class="titulo-seccion">Datos de Contacto</h2>
+
+                <div class="grupo-input">
+                    <label for="correo">Ingresa tu correo electronico</label>
+                    <input type="text" id="correo" placeholder="Ej: usuario@mail.com" required>
+                </div>
+
+                <div class="fila-inputs">
+                    <div class="grupo-input">
+                        <label for="telefono">Ingresa tu numero de celular</label>
+                        <input type="number" id="telefono" required min="0">
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="fecha-nacimiento">Ingresa tu fecha de nacimiento</label>
+                        <input type="date" id="fecha-nacimiento" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion-formulario">
+                <h2 class="titulo-seccion">Seguridad y Pago</h2>
+
+                <div class="grupo-input">
+                    <label for="num-tarjeta">Escribe tu numero de Tarjeta</label>
+                    <input type="text" id="num-tarjeta" pattern="[0-9\s]+" title="Solo se permiten números y espacios" minlength="16" maxlength="19" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="contraseña">Crea tu contraseña</label>
+                    <div class="contenedor-password">
+                        <input type="password" id="contraseña" required>
+                        <button type="button" id="btn-generar" class="btn-secundario">Sugerir Contraseña</button>
+                    </div>
+                    
+                    <div class="grupo-checkbox">
+                        <input type="checkbox" id="mostrar-contraseña">
+                        <label for="mostrar-contraseña">Mostrar contraseña</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grupo-resultado">
+                <input type="text" id="resultado" readonly placeholder="Estado del registro">
+            </div>
+
+            <div class="acciones-formulario">
+                <button type="button" id="btn-registrar" class="btn-principal">Registar Usuario</button>
+                <button type="button" id="btn-iniciar-sesion" class="btn-secundario">Iniciar Sesión</button>
+            </div>
+        </form>
+    </main>
+
+    <div id="modal-edad" class="modal-oculto">
+        <div class="modal-contenido">
+            <h2>Verificación de Edad</h2>
+            <p id="modal-mensaje"></p>
+            <button type="button" id="btn-cerrar-modal" class="btn-principal">Aceptar</button>
+        </div>
+    </div>
+</body>
+</html>

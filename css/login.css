@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(#1a3326, #2d5a43);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+}
+
+.contenedor-principal {
+    width: 100%;
+    max-width: 400px;
+}
+
+.formulario-login {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    width: 100%;
+}
+
+.formulario-login h1 {
+    text-align: center;
+    color: #1a3326;
+    margin-bottom: 30px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.grupo-input {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+label {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d9d4;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #f9fbf9;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #2d5a43;
+    box-shadow: 0 0 0 3px rgba(45, 90, 67, 0.15);
+    background-color: #ffffff;
+}
+
+.acciones-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.btn-principal, .btn-secundario {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-principal {
+    background: linear-gradient(135deg, #2d5a43, #3a7556);
+    color: white;
+    box-shadow: 0 4px 12px rgba(45, 90, 67, 0.2);
+}
+
+.btn-principal:hover {
+    background: linear-gradient(135deg, #244936, #2d5a43);
+}
+
+.btn-principal:active {
+    transform: scale(0.98);
+}
+
+.btn-secundario {
+    background-color: #e6f0eb;
+    color: #2d5a43;
+}
+
+.btn-secundario:hover {
+    background-color: #d1e3d8;
+}
+
+.grupo-resultado {
+    margin-top: 20px;
+}
+
+#resultado {
+    text-align: center;
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+    color: #2d5a43;
+    box-shadow: none;
+    width: 100%;
+}

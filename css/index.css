@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(#1a3326, #2d5a43);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+}
+
+.contenedor-principal {
+    width: 100%;
+    max-width: 750px;
+}
+
+.formulario-registro {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    width: 100%;
+}
+
+.formulario-registro h1 {
+    text-align: center;
+    color: #1a3326;
+    margin-bottom: 30px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.seccion-formulario {
+    border: none;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eef2ef;
+}
+
+.titulo-seccion {
+    font-size: 17px;
+    font-weight: 600;
+    color: #2d5a43;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.grupo-input {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.fila-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.fila-inputs .grupo-input {
+    flex: 1 1 calc(50% - 15px);
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d9d4;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #f9fbf9;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #2d5a43;
+    box-shadow: 0 0 0 3px rgba(45, 90, 67, 0.15);
+    background-color: #ffffff;
+}
+
+.contenedor-password {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.contenedor-password input {
+    flex: 1;
+}
+
+.grupo-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.grupo-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #2d5a43;
+    cursor: pointer;
+}
+
+.grupo-checkbox label {
+    margin: 0;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.btn-principal, .btn-secundario {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-principal {
+    background: linear-gradient(135deg, #2d5a43, #3a7556);
+    color: white;
+    width: 100%;
+    margin-top: 15px;
+    box-shadow: 0 4px 12px rgba(45, 90, 67, 0.2);
+}
+
+.btn-principal:hover {
+    background: linear-gradient(135deg, #244936, #2d5a43);
+}
+
+.btn-principal:active {
+    transform: scale(0.98);
+}
+
+.btn-secundario {
+    background-color: #e6f0eb;
+    color: #2d5a43;
+    white-space: nowrap;
+}
+
+.btn-secundario:hover {
+    background-color: #d1e3d8;
+}
+
+.grupo-resultado {
+    margin-top: 15px;
+}
+
+#resultado {
+    text-align: center;
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+    color: #2d5a43;
+    box-shadow: none;
+}
+
+.modal-oculto {
+    display: none;
+}
+
+.modal-visible {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 51, 38, 0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-contenido {
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    animation: aparecerModal 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes aparecerModal {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-contenido h2 {
+    margin-top: 0;
+    color: #1a3326;
+    margin-bottom: 15px;
+}
+
+.modal-contenido p {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+#btn-cerrar-modal {
+    margin-top: 10px;
+}
+
+.acciones-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.acciones-formulario .btn-principal {
+    margin-top: 0; 
+}
+
+.acciones-formulario .btn-secundario {
+    width: 100%;
+    text-align: center;
+}

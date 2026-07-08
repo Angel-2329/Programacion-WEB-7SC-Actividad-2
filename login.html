@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Usuarios</title>
+    <script type="module" src="js/login.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <main class="contenedor-principal">
+        <form class="formulario-login">
+            <h1>Iniciar Sesión</h1>
+
+            <div class="grupo-input">
+                <label for="correo">Ingrese su Correo Electronico</label>
+                <input id="correo" type="text" placeholder="Ej: 456@hotmail.mx" required>
+            </div>
+
+            <div class="grupo-input">
+                <label for="contraseña">Ingrese su Contraseña</label>
+                <input id="contraseña" type="password" required>
+
+                <div class="grupo-checkbox">
+                    <input type="checkbox" id="mostrar-contraseña">
+                    <label for="mostrar-contraseña">Mostrar contraseña</label>
+                </div>
+            </div>
+
+            <div class="acciones-formulario">
+                <button type="button" id="btn-validar" class="btn-principal">Validar Credenciales</button>
+                <button type="button" id="btn-registro" class="btn-secundario">Ir a Registro</button>
+            </div>
+
+            <div class="grupo-resultado">
+                <input type="text" id="resultado" readonly placeholder="Estado del ingreso">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
